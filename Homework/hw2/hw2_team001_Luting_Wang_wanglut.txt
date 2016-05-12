@@ -1,0 +1,82 @@
+###################################################################
+# Carnegie Mellon University - Electrical and Computer Engineering
+# 18-645: How To Write Fast Code (Spring 2015)
+#
+#     HOMEWORK 2 Answer Sheet
+#
+# Due:  Feb 11, 2015
+#
+# Note: For ease of grading, please follow the format exactly
+#
+#       There are many students in this class, the course staff
+#       would like to automate the process of grading the 
+#       homework so we can spend more time helping you with the 
+#       understanding of the knowledge. 
+#
+#       Thank you for your cooperation. 
+#
+###################################################################
+
+Student Name : Luting Wang
+
+Team Name : 001
+
+Date of Submission : 2016/2/12
+
+# =================================================================
+# TASK 0
+# - Please name this file: 18645_HW2_{FirstName}_{LastName}.txt
+# - e.g. "18645_HW2_Anderson_Jane.txt"
+
+# =================================================================
+# TASK 1
+# - Setting up the CUDA environment
+# - Downloading and Installing SDK
+# - Build executables   
+# - Run Tests
+
+Question 1:
+a) Host to Device Bandwidth:6111.8 MB/s
+b) Device to Host Bandwidth:6241.2 MB/s
+c) Device to Device Bandwidth:155022.3MB/S
+
+# =================================================================
+# TASK 2
+# - Get information about the GPU and Run the CUDA Visual Profiler
+# - Running the CUDA Visual Profiler
+
+Is this complete? (Yes/No):Yes 
+
+# - Questions on CUDA and GPUs
+
+Question 1 :
+a) Number of threads per block:1024
+b) Number of threads in a warp:32
+c) Maximum number of threads per Streaming Multiprocessor:2048
+d) Maximum number of warps per block:32
+e) Maximum number of warps per Streaming Multiprocessor:64
+
+Question 2 :
+a) The size of the register file per Streaming Multiprocessor:128KB
+b) Is the shared memory divided into 16 memory banks? (True/False):False
+c) The size of the global memory on the device:2048 MB
+d) The total amount of shared memory per block:48 KB
+
+Question 3 :
+a) The maximum number of floating point operations per thread per cycle:384
+b) Yes/No:Yes
+c) The peak performance of a single GTX670 GPU:2.63 Teraflop/s
+
+Question 4 :
+a) The total amount of L2 cache: 512 KB
+b) True/False:False
+c) True/False:False
+
+
+# =================================================================
+# TASK 3
+# - Getting Started on CUDA Matrix Multiply
+
+Question 1 : 
+a) If successful, report the performance you get for this test case, otherwise explain why it fails: It fails. The reason is that the maximun number of thread per block is 1024, and according to:dim3 dimBlock(sq_dimension, sq_dimension), if sq_dimension is 33,there will be over 1024 threads per block, which is out of the hardware limit. 
+

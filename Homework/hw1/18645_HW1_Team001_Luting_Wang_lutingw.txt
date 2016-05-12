@@ -1,0 +1,106 @@
+###################################################################
+# Carnegie Mellon University - Electrical and Computer Engineering
+# 18-645: How To Write Fast Code (Spring 2015)
+#
+#     HOMEWORK 1 Answer Sheet
+#
+# Due:  2016/1/27
+#
+# Note: For ease of grading, please follow the format exactly
+#
+#       There are many students in this class, the course staff
+#       would like to automate the process of grading the 
+#       homework so we can spend more time helping you with the 
+#       understanding of the knowledge. 
+#
+#       Thank you for your cooperation. 
+#
+###################################################################
+
+Student Name : Luting Wang
+
+Team Name : 001
+
+Date of Submission : 2016/1/26
+
+# =================================================================
+# TASK 0
+# - Please name this file: 18645_HW1_Team{0#}_{Last_First}.txt
+# - e.g. "18645_HW1_Team03_Anderson_Jane.txt"
+
+Is this complete? (Yes/No):Yes
+
+# =================================================================
+# TASK 1 
+# - Logging into a cluster machine
+
+Is this complete? (Yes/No):Yes
+
+# =================================================================
+# TASK 2 
+# - Creating a git repository
+
+Question 1 : The andrew id wherein the git repository of your team resides : czhun
+
+Question 2 : Team name as provided by the course staff (eg. team03) :
+team001
+
+Question 3 : Report the speed of execution of all three test cases (in matrix_mul_01.dat) using the sequential version on one of the cluster machines:
+Testcase 1 : 0.0109863 ms
+Testcase 2 : 0.0229492 ms
+Testcase 3 : 0.38916 ms
+
+# =================================================================
+# TASK 3 
+# - Learning about your computing resources
+
+Question 1: For ghc51.ghc.andrew.cmu.edu, log in and determine:
+a) The exact processor model
+	Value		        : 60
+	Source/Command	: cat /proc/cpuinfo | grep "model" | grep -v "model name" | uniq
+
+b) The number of physical cores it has
+	Value		        : 4
+	Source/Command	: cat /proc/cpuinfo | grep "cpu cores" | uniq
+
+c) The number of virtual cores it has
+    Value           : 8
+	Source/Command  : cat /proc/cpuinfo | grep "processor" | wc -l
+ 
+d) L1 cache size specification
+  Value           :L1I: 32 KB , L1D: 32 KB
+  Source/Command  :lscpu | grep "L1"
+    
+e) L2 cache size specification
+  Value           :256 KB
+  Source/Command  :lscpu | grep "L1"
+    
+f) The level of SSE the processor supports
+  Value           :sse4
+  Source/Command  :cat /proc/cpuinfo | grep -o sse[0-9] | sort | uniq
+
+
+Question 2: For your laptop, determine:
+a) The exact processor model
+  Value           :60
+  Source/Command  :cat /proc/cpuinfo | grep "model" | grep -v "model name" | uniq
+    
+b) The number of physical cores it has
+  Value           : 4
+  Source/Command  : cat /proc/cpuinfo | grep "cpu cores" | uniq
+    
+c) The number of virtual cores it has
+  Value           : 8
+  Source/Command  : cat /proc/cpuinfo | grep "processor" | wc -l
+    
+d) L1 cache size specification
+  Value           : L1I: 32 KB , L1D: 32 KB
+  Source/Command  :lscpu | grep "L1"
+    
+e) L2 cache size specification
+  Value           :256 KB
+  Source/Command  :lscpu | grep "L2"
+    
+f) The level of SSE the processor supports
+  Value           :sse4
+  Source/Command  :cat /proc/cpuinfo | grep -o sse[0-9] | sort | uniq

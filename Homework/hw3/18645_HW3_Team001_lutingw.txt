@@ -1,0 +1,119 @@
+###################################################################
+# Carnegie Mellon University - Electrical and Computer Engineering
+# 18-645: How To Write Fast Code (Fall 2012)
+#
+#     HOMEWORK 3 Answer Sheet
+#
+# Due:  March 6, 2015
+#
+# Note: For ease of grading, please follow the format exactly
+#
+#       There are many students in this class, the course staff
+#       would like to automate the process of grading the 
+#       homework so we can spend more time helping you with the 
+#       understanding of the knowledge. 
+#
+#       Thank you for your cooperation. 
+#
+###################################################################
+
+Student Name : Luting Wang
+
+Team Name : 001
+
+Date of Submission : 2016.3.6
+
+# =================================================================
+# TASK 0
+# - Please name this file: 18645_HW3_Team{0#}_{Last_First}.txt
+# - e.g. "18645_HW3_Team03_Anderson_Jane.txt"
+
+Is this complete? (Yes/No): Yes
+
+# - Create Amazon AWS account
+
+Is this complete? (Yes/No): Yes
+
+# =================================================================
+# TASK 1 - Installing Hadoop on local machine
+
+Is this complete? (Yes/No): Yes
+
+# =================================================================
+# TASK 2 - Compiling and running Project 3 on local machine
+
+Is this complete? (Yes/No): Yes
+
+Question:
+1) How long does each map-reduce step take? (in ms) (Hint: See hadoop output)
+# Only put the numbers
+A1 - Compute NGram Count: 413468
+A2 - Get feature vector for hashtag #Job: 19386
+A3 - Get feature vector for all hashtags: 24173
+A4 - Get similarities between #job and all other hashtags: 2117
+
+2) How many output files are there for NgramCount and HashtagSim? (Only count part-r-*)
+
+A5 - NgramCount: 1
+A6 - HashtagSim: 1
+
+3) What is the N of the ngrams, for the current implementation?
+
+A7 - N: 1
+
+4) What are the top 5 most occurring ngrams? (Hint: sort the output in data/ngram10m/)
+
+# Put most popular ones first, put only the ngram not the count, separate by ','
+# Example: it, is, are, we, ...
+
+A8 - Top 5 ngrams: the, to, a, rt, for
+
+5) What are the top 5 pairs of hashtags that have highest similarity score? (Hint: sort output in
+data/hashtag10m, remove pairs that are duplicated)
+
+# Put most similar ones first, put only the hashtag pair not the count, separate by ','
+# Example: #job #jobs, #facebook #google, ...
+
+A9 - Top 5 pairs: #job #fb, #job #ff, #job #smen, #job #photography, #job #1
+
+
+# =================================================================
+# TASK 3 - Running Project 3 on Amazon EMR cluster
+
+Is this complete? (Yes/No): Yes
+
+Question:
+1) How long does each map-reduce step take? (in ms) (Hint: See log file in S3)
+
+# Only put the numbers
+A10 - Compute NGram Count: 228977 
+A11 - Get feature vector for hashtag #Job: 75662
+A12 - Get feature vector for all hashtags: 80700
+A13 - Get similarities between #job and all other hashtags:44557
+
+2) How many output files are there for NgramCount and HashtagSim? (Only count part-r-*)
+
+A14 - NgramCount: 4
+A15 - HashtagSim: 4
+
+Is it the same as running both programs locally? (Yes/No): No
+
+If not, what's the reason? 
+
+A16 - Reason: Because we have 4 cores to perform reducer, and each reducer will output one file.
+
+3) What are the top 5 most occurring ngrams? (Hint: retrieve all output files and sort)
+
+# Put most popular ones first, put only the ngram not the count, separate by ','
+# Example: it, is, are, we, ...
+
+A17 - Top 5 ngrams: the, to, a, rt, for
+
+4) What are the top 5 pairs of hashtags that have highest similarity score? (Hint: retrieve all output files
+and sort, remove pairs that are duplicated)
+
+# Put most similar ones first, put only the hashtag pair not the count, separate by ','
+# Example: #job #jobs, #facebook #google, ...
+
+A18 - Top 5 pairs: #job #fb, #job #ff, #job #smen, #job #photography, #job #1
+
