@@ -26,7 +26,7 @@ This is the course taught by Prof.Jike Chong and Prof. Ian Lane from CMU
 
 
 ### Term project
-Use Hadoop and Spark to implement a movie recommendation model with 10M stable benchmark rating dataset
+Use Hadoop and Spark to implement a movie recommendation model with 10M stable benchmark rating dataset  
 Data from [MovieLens](http://grouplens.org/datasets/movielens/)
 
 #### 1. Local Machine
